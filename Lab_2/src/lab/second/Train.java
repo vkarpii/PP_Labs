@@ -1,60 +1,90 @@
 package lab.second;
 
-import java.io.*;
-
 public class Train {
-    private String appoint ;
-    private int hour,min;
-    private int num;
-    private int comm,comp,plat,lux;
+    private int trainNum;
+    private String destination;
+    private int shipTime;
+    private int common;
+    private int comp;
+    private int plats;
+    private int lux;
 
-    Train(){}
-
-    public void printTrain(){
-        System.out.format("%s %8d %8d:%d %10d,%d,%d,%d\n",appoint,num,hour,min,comm,comp,plat,lux);
+    @Override
+    public String toString() {
+        return "Train:" +
+                "num='" + trainNum + '\'' +
+                ", destination='" + destination + '\'' +
+                ", time=" + shipTime +
+                ", common=" + common +
+                " , comp=" + comp +
+                " , plats=" + plats +
+                " , lux=" + lux;
     }
 
-    public String getAppoint() {
-        return appoint;
+    Train(int trainNum,String destination,int shipTime, int common, int comp, int plats, int lux){
+        this.trainNum = trainNum;
+        this.destination = destination;
+        this.shipTime = shipTime;
+        this.common = common;
+        this.comp = comp;
+        this.plats = plats;
+        this.lux = lux;
     }
 
-    public void setAppoint(String appoint) {
-        this.appoint = appoint;
+    public int getCommon() {
+        return common;
     }
 
-    public int getHour() {
-        return hour;
+    public void setCommon(int common) {
+        this.common = common;
     }
 
-    public void setHour(int hour) {
-        this.hour = hour;
-    }
-
-    public void setMin(int min) {
-        this.min = min;
-    }
-
-    public void setNum(int num) {
-        this.num = num;
-    }
-
-    public int getComm() {
-        return comm;
-    }
-
-    public void setComm(int comm) {
-        this.comm = comm;
+    public int getComp() {
+        return comp;
     }
 
     public void setComp(int comp) {
         this.comp = comp;
     }
 
-    public void setPlat(int plat) {
-        this.plat = plat;
+    public int getPlats() {
+        return plats;
+    }
+
+    public void setPlats(int plats) {
+        this.plats = plats;
+    }
+
+    public int getLux() {
+        return lux;
     }
 
     public void setLux(int lux) {
         this.lux = lux;
     }
+
+    public int getTrainNum() {
+        return trainNum;
+    }
+
+    public void setTrainNum(int trainNum) {
+        this.trainNum = trainNum;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public int getShipTime() {
+        return shipTime;
+    }
+
+    public void setShipTime(int shipTime) {
+        this.shipTime = shipTime;
+    }
+
 }
